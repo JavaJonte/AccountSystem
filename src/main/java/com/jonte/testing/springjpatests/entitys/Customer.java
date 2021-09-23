@@ -1,4 +1,4 @@
-package com.jonte.testing.springjpatests;
+package com.jonte.testing.springjpatests.entitys;
 
 import lombok.*;
 import javax.persistence.*;
