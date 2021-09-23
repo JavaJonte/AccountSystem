@@ -1,5 +1,6 @@
 package com.jonte.testing.springjpatests;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import java.util.List;
@@ -7,20 +8,22 @@ import java.util.List;
 @Configuration
 public class CustomerImpl {
 
+    @Autowired
+    CustomerRepository customerRepository;
+
     @Bean
-    public static Customer saveCustomer (CustomerRepository customerRepository){
-        Customer hej = new Customer("Jonte", "W", "j@W.se");
-        customerRepository.save(hej);
-        Customer hejaa = new Customer( "ASD", "BDF", "a@b.se");
-        customerRepository.save(hejaa);
-        Customer heja = new Customer("Jonte4", "Pell2", "j@p.se");
-        customerRepository.save(heja);
-        return null;
+    public Customer create(){
+        Customer customer = new Customer();
+        customer.setFirstName("TEST");
+        customer.setLastName("MER TEST");
+        customer.setEmail("ÄnnuMerA@a.se");
+        customerRepository.save(customer);
+        return customer;
     }
 
     @Bean
     public static Customer deleteCustomer (CustomerRepository customerRepository) {
-        customerRepository.deleteById(1);
+        //customerRepository.deleteById(2);
         return null;
     }
 
