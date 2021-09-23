@@ -1,6 +1,8 @@
 package com.jonte.testing.springjpatests;
 
 import lombok.*;
+import org.springframework.lang.Nullable;
+
 import javax.persistence.*;
 
 @Getter
@@ -15,7 +17,13 @@ public class Customer {
     @Id
     @GeneratedValue
     @Column(name = "id", updatable = false)
-    private Long id;
-    private String firstName;
+    private Integer id;
+    private String firstName, lastName, email;
 
+
+    public Customer(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 }
