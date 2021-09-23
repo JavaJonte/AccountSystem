@@ -2,10 +2,6 @@ package com.jonte.testing.springjpatests;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.converter.json.JsonbHttpMessageConverter;
-
-import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
@@ -24,7 +20,7 @@ public class CustomerImpl {
 
     @Bean
     public static Customer deleteCustomer (CustomerRepository customerRepository) {
-      //  customerRepository.deleteById(1);
+        customerRepository.deleteById(1);
         return null;
     }
 

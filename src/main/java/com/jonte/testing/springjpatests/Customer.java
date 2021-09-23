@@ -1,7 +1,10 @@
 package com.jonte.testing.springjpatests;
 
-import lombok.*;
-import org.springframework.lang.Nullable;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
