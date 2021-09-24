@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
+// börjar skriva cruden här
 @RestController // visar att det är en rest controller bean
 @RequestMapping("/api/v1/customer")
 public class CustomerController {
@@ -20,6 +20,8 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
+
+    // CRUD
     @GetMapping
     public List <Customer> getCustomer(){
         return customerService.getCustomers();
@@ -29,4 +31,21 @@ public class CustomerController {
     public void registerNewCustomer(@RequestBody Customer customer){
         customerService.addNewCustomer(customer);
     }
+
+    @DeleteMapping(path = "{customerId}")
+    public void deleteCustomer(@PathVariable("customerId")Long customerId){
+        customerService.deleteCustomer(customerId);
+    }
+
+    @PutMapping(path = "{customerId}")
+    public void updateCustomer(
+            @PathVariable("customerId") Long customerId,
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String email){
+        customerService.updateCustomer(customerId,name,email);
+    }
+
+
+
+
 }
