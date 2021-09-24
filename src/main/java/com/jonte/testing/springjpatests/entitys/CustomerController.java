@@ -30,3 +30,5 @@ public class CustomerController {
         customerService.addNewCustomer(customer);
     }
 }
+
+//Jonte testar pusha för merge..
