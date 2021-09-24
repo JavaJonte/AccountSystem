@@ -1,5 +1,7 @@
-package com.jonte.testing.springjpatests;
+package com.jonte.testing.springjpatests.implementation;
 
+import com.jonte.testing.springjpatests.interfaces.CustomerRepository;
+import com.jonte.testing.springjpatests.entitys.Customer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
