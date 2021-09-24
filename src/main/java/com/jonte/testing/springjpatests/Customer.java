@@ -29,4 +29,5 @@ public class Customer {
         this.lastName = lastName;
         this.email = email;
     }
+
 }
