@@ -1,4 +1,4 @@
-package com.jonte.testing.springjpatests;
+package com.accountSystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

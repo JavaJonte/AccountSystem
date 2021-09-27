@@ -5,17 +5,19 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.4</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.4.1</version>
+        <relativePath/>
     </parent>
-    <groupId>com.jonte.testing</groupId>
-    <artifactId>spring-jpa-tests</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>Accountmanagnent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-jpa-tests</name>
-    <description>spring-jpa-tests</description>
+    <name>Accountmanagnent</name>
+
+
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -26,20 +28,27 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <version>8.0.26</version>
         </dependency>
+
+
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
@@ -48,14 +57,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
     </build>
