@@ -16,6 +16,8 @@ import java.util.Collections;
 @Entity(name = "Customer")
 @Table(name = "customer")    // skapar customer table
 
+// det är här vi sätter hur en customer ska se ut och visar hur den ska läggas in i databasen
+
 public class Customer {
     @Id
     @SequenceGenerator(           // lägger in datan på rätt sätt i databasen

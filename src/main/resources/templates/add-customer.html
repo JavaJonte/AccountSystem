@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Account Manager</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div align="center">
+    <form action="#" th:action="@{/customers/save}" th:object="${customer}" method="post">
+
+        <table class="table table-striped" border="0" cellpadding="10">
+            <tr>
+                <td>Customer Name:</td>
+                <td><input type="text" th:field="*{name}" /></td>
+            </tr>
+            <tr>
+                <td>Customer Surname:</td>
+                <td><input type="text" th:field="*{surname}" /></td>
+            </tr>
+
+            <tr>
+                <td>Customer Email:</td>
+                <td><input type="text" th:field="*{email}" /></td>
+            </tr>
+
+
+            <tr>
+                <td>Saldo:</td>
+                <td><input type="text" th:field="*{saldo}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"> <button type="submit" class="btn btn-outline-danger">Save</button> </td>
+
+
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

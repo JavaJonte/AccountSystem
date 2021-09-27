@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+// här så länkar vi bara till JpaRepository för att nå dess många metoder
+
 @Repository // berättar att det är en repository böna
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 

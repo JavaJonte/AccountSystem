@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
+// här hårdkodar vi bara databasen för att vi ska ha något att jobba med
+
 @Configuration
 public class CustomerConfig {
 
