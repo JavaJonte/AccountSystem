@@ -3,6 +3,7 @@ package com.accountSystem;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 
 @Service
@@ -10,6 +11,15 @@ public class CustomerService {
 
     @Autowired
     CustomerRepository customerRepository;
+
+
+
+    @GetMapping
+    public List<Customer> getCustomers(){
+        return customerRepository.findAll();
+    }
+
+
 
 
     public List<Customer> loadAllCustomers() {
