@@ -11,6 +11,7 @@ public class CustomerService {
     @Autowired
     CustomerRepository customerRepository;
 
+
     public List<Customer> loadAllCustomers() {
 
         return (List<Customer>) customerRepository.findAll();
@@ -36,5 +37,8 @@ public class CustomerService {
 
         return customerRepository.save(customer);
     }
+
+
+
 
 }
